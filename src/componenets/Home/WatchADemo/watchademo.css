@@ -1,0 +1,16 @@
+.span_watch{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 45px;
+line-height: 68px;
+/* identical to box height */
+
+letter-spacing: -0.02em;
+
+/* black */
+
+color: #302A39;
+position: relative;
+left: 10%;
+}

@@ -1,0 +1,38 @@
+.main_div_extended_height{
+width: 100%;
+height: 857px;
+background: #302A39;
+border-radius: 0px 0px 64px 64px;
+
+}
+.text_main_div_heading{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 60px;
+line-height: 72px;
+/* or 120% */
+
+letter-spacing: -0.02em;
+
+/* white */
+
+color: #FFFFFF;
+margin-top: 185px;
+}
+.text_main_div_desc{
+    /* Desktop/Bodytext-regular */
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 150%;
+/* or 27px */
+
+letter-spacing: 0.005em;
+
+/* white */
+
+color: #FFFFFF;
+}

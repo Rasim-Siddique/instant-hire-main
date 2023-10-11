@@ -1,0 +1,48 @@
+.buttons_services {
+    height: 60px;
+    width: 100%;
+    /* white */
+
+    background: #FFFFFF;
+    /* border */
+
+    border-bottom: 1px solid #E1E4E8;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+}
+
+.buttons_text {
+    cursor: pointer;
+}
+
+.image-service {
+    border-radius: 4px;
+    width: 90%;
+    position: relative;
+    right: 15%;
+
+}
+
+.text_col_span {
+    /* Desktop/Text-18px_regular */
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    /* identical to box height */
+
+
+    /* black */
+
+    color: #302A39;
+    position: relative;
+    top: 20%;
+    right: 5%;
+}
+
+.ant-dropdown-menu-item-active:not(.ant-dropdown-menu-item-disabled) {
+    box-shadow: none !important;
+}

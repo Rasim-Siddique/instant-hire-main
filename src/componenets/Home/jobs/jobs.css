@@ -1,0 +1,202 @@
+.vaccancy_heading {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 45px;
+  line-height: 68px;
+  /* identical to box height */
+
+  letter-spacing: -0.02em;
+
+  /* black */
+
+  color: #302a39;
+}
+.key_1_all {
+  height: 36px;
+
+  /* Desktop/Heading_3-semibold */
+
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  /* identical to box height */
+
+  /* black */
+
+  color: #302a39;
+  padding-left: 7vw;
+  padding-right: 7vw;
+  margin-left: -10px;
+}
+.key_1_remote {
+  height: 36px;
+
+  /* Desktop/Heading_3-semibold */
+
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  /* identical to box height */
+
+  /* black */
+
+  color: #302a39;
+  padding-left: 6vw;
+  padding-right: 7vw;
+}
+.jobs_container{
+  position: relative;
+  left: -1vw;
+}
+.key_1_onsite {
+  height: 36px;
+
+  /* Desktop/Heading_3-semibold */
+
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  /* identical to box height */
+
+  /* black */
+
+  color: #302a39;
+  padding-left: 7vw;
+  padding-right: 7vw;
+}
+.see_all_jobs_button{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 18px;
+/* identical to box height */
+
+
+/* black */
+
+color: #302A39;
+
+}
+.key_1_hybrid {
+  height: 36px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  color: #302a39;
+  padding-left: 6vw;
+  padding-right: 4vw;
+  margin-left: -5%;
+}
+
+:where(.css-dev-only-do-not-override-15rg2km).ant-tabs .ant-tabs-tab:hover {
+  color: black;
+}
+.see_all_jobs_button {
+  height: 34px;
+
+  /* white */
+
+  background: #ffffff;
+  border-bottom: 1px solid #e1e4e8;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  width: 100%;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  /* identical to box height */
+
+  text-transform: uppercase;
+
+  /* black */
+
+  color: #302a39;
+}
+@media (max-width: 768px) {
+  .vaccancy_heading {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .padding_mobile {
+    padding-top: 20px;
+  }
+}
+.last_button {
+  padding-right: 50px !important;
+}
+@media (max-width: 768px) {
+  .key_1_all {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    color: #c7c7c7;
+    padding-left: 4vw;
+    padding-right: 2vw;
+    margin-left: -10px;
+  }
+  .key_1_remote {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    color: #c7c7c7;
+    padding-left: 4vw;
+    padding-right: 2vw;
+    margin-left: -9px;
+  }
+  .key_1_onsite {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    color: #c7c7c7;
+    padding-left: 4vw;
+    padding-right: 2vw;
+    margin-left: -10px;
+  }
+  .key_1_hybrid{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    color: #C7C7C7;
+    padding-left: 4vw;
+    padding-right: 2vw;
+    margin-left: -10px;
+}
+.jobs_container{
+  position: relative;
+  left: 1uw;
+}
+}
+
+
+
+
+@media (max-width : 768px){
+  .tabs-main{
+    width : 91% !important
+  }
+  .relative_pos{
+    position : relative;
+    left : 6vw
+  }
+}

@@ -1,0 +1,38 @@
+
+.cards_section{
+    background: #FFFFFF;
+border-radius: 64px 64px 0px 0px;
+height: 811px;
+
+}
+.text_what_we_offer{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 45px;
+line-height: 68px;
+/* identical to box height */
+
+letter-spacing: -0.02em;
+
+/* black */
+
+color: #302A39;
+}
+.container_hire_us{
+    /* width: 100%; */
+     position: relative;
+    top: 100px;
+    height: 95%;
+}
+.girl_image{
+    position: relative !important;
+    top: -150% !important;
+}
+
+@media (max-width : 768px) {
+    .div_top{
+        position: relative;
+        top: 30px;
+    }
+}

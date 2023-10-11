@@ -1,0 +1,12 @@
+@media (max-width : 768px) {
+    .technical_container{
+        position: relative !important;
+        top: -80px !important;
+      }
+      .girl_image{
+        position: relative !important;
+        left : -5vw !important;
+        width: 95%;
+        top: -5% !important;
+      }
+}

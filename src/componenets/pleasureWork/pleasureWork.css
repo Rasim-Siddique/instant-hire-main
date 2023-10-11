@@ -1,0 +1,31 @@
+.pleasure_work {
+    position: relative;
+    background: #FCFCFC;
+    padding: 4rem 0;
+    top: 15px;
+    right: 0;
+    width: 100%;
+}
+
+.brand-list {
+    display: flex;
+}
+
+@media (max-width: 1300px) {
+    .brand-list {
+        flex-direction: column;
+    }
+}
+
+.pleasure_heading {
+    font-size: 24px;
+    font-family: Poppins;
+    font-weight: 600;
+    color: #302A39;
+}
+
+@media (max-width: 768px) {
+    .pleasure_work {
+        width: 100%;
+    }
+}

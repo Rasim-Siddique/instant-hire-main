@@ -1,0 +1,261 @@
+.about_us_hero {
+    /* Desktop/Heading-semibold */
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2.5rem;
+    line-height: 72px;
+    /* or 120% */
+
+    text-align: center;
+    letter-spacing: -0.02em;
+
+    /* black */
+
+    color: white;
+}
+
+.main_hero_about {
+    margin: 8rem auto;
+}
+
+.banner {
+    margin-top: 2rem;
+    background-image: url(../../assets/aboutUs/hero.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.banner::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(48, 42, 57, 0.80) 0%, rgba(48, 42, 57, 0.80) 100%);
+}
+
+.row_color_main {
+    width: 100%;
+    height: 590px;
+
+    background: #302A39;
+    border-radius: 0px;
+}
+
+.mission-img-wrapper {
+    background-image: url(../../assets/aboutUs/mission.jpg);
+    background-position-x: right;
+    background-position-y: center;
+    height: 25rem;
+    margin-left: auto;
+    margin-right: 4rem;
+    border-radius: 1rem;
+}
+
+
+
+.our_mission_text {
+
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    /* identical to box height */
+
+
+    color: #FFFFFF;
+
+}
+
+.our_mission_row {
+    margin-top: 4rem;
+}
+
+.our_mission_row_1 {
+    margin-top: 20px;
+}
+
+.our_mission_text_1 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 60px;
+    line-height: 72px;
+    /* or 120% */
+
+    letter-spacing: -0.02em;
+
+    /* white */
+
+    color: #FFFFFF;
+}
+
+.our_process_text {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 45px;
+    line-height: 68px;
+    /* identical to box height */
+
+    letter-spacing: -0.02em;
+
+    /* black */
+
+    color: #302A39;
+
+}
+
+.hr_text {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    /* identical to box height */
+
+
+    /* white */
+
+    color: #FFFFFF;
+
+}
+
+.main_row_hr {
+    height: 162px;
+
+    /* black */
+
+    background: #302A39;
+    /* black */
+
+    border: 1px solid #302A39;
+    border-radius: 12px;
+    position: relative;
+    top: 100px;
+
+}
+
+.hr_text {
+    position: relative;
+    top: 35px;
+}
+
+.hr_subtext {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    /* or 27px */
+
+    letter-spacing: 0.005em;
+
+    /* white */
+
+    color: #FFFFFF;
+    position: relative;
+    top: 50px;
+}
+
+.image-aunty-ds {
+    position: relative !important;
+    top: -2vh !important;
+}
+
+.image-aunty {
+    position: relative;
+    left: 20%;
+}
+
+@media (max-width : 768px) {
+    .about_us_hero {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 150%;
+    }
+
+    .pic_1_aunty {
+        position: relative;
+        bottom: 64vh;
+        width: 92%;
+        left: 3.5vw;
+    }
+
+    .hr_text {
+        font-family: Poppins;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 27px;
+        letter-spacing: 0em;
+        text-align: left;
+
+    }
+
+    .hr_subtext {
+        font-family: Poppins;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+        letter-spacing: 0.005em;
+        text-align: left;
+
+    }
+
+    .main_row_hr {
+        position: relative;
+        left: 4.5vw;
+        top: 5vh;
+    }
+
+    .mt_mobile_2 {
+        margin-top: 10vh;
+    }
+
+    .main_row_hr_1 {
+        height: 170%;
+    }
+
+    .main_hero_about {
+        position: relative;
+        top: -50px;
+    }
+
+    .our_mission_text {
+        font-family: 'Poppins';
+        font-style: italic;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 27px;
+    }
+
+    .our_mission_text_1 {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 150%;
+    }
+
+    .our_mission_row {
+        margin-top: 350px;
+    }
+
+    .mt_mobile_1 {
+        margin-top: 250px;
+    }
+
+    .our_process_text {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 30px;
+    }
+}

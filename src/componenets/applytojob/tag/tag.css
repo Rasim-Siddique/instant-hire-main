@@ -1,0 +1,21 @@
+.hybrid-tag{
+    height: 35px;
+
+background: rgba(242, 194, 24, 0.1);
+border-radius: 4px;
+width: 100%;
+}
+.hybrid-text{
+    /* Desktop/Text-14px_regular */
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 21px;
+/* identical to box height */
+
+
+color: #F2C218;
+text-align: center;
+}

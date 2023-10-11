@@ -1,0 +1,129 @@
+.hybrid-tag{
+    height: 35px;
+
+background: rgba(242, 194, 24, 0.1);
+border-radius: 4px;
+width: 100%;
+}
+ul{
+    
+}
+.job-title-1{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 45px;
+line-height: 68px;
+/* identical to box height */
+
+letter-spacing: -0.02em;
+
+/* black */
+
+color: #302A39;
+position: relative;
+left: 3%;
+top: 20px;
+}
+.job-type-text{
+    /* Desktop/Text-16px_regular */
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height */
+
+
+/* black */
+
+color: #302A39;
+}
+.full-time-text{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 21px;
+/* identical to box height */
+
+
+/* black */
+
+color: #302A39;
+}
+.max_width_ad{
+    max-width: 9.9% !important;
+}
+.job_req{
+font-family: Poppins;
+font-size: 24px;
+font-weight: 600;
+line-height: 36px;
+letter-spacing: 0em;
+text-align: left;
+
+}
+.headings_intro{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 36px;
+/* identical to box height */
+
+
+color: #000000;
+}
+.text-description{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 150%;
+/* or 27px */
+
+letter-spacing: 0.005em;
+
+/* black */
+
+color: #302A39;
+}
+.main_form_div_1_2
+{
+    background: #FFFFFF;
+    /* box */
+    
+    box-shadow: -12px 12px 30px rgba(0, 0, 0, 0.12);
+    border-radius: 12px;
+    height: 82vh
+}
+.apply_for_this{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 36px;
+/* identical to box height */
+
+
+color: #212121;
+
+}
+.description_text_job{
+    /* Desktop/Bodytext-regular */
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 150%;
+/* identical to box height, or 27px */
+
+letter-spacing: 0.005em;
+
+/* black */
+
+color: #302A39;
+}

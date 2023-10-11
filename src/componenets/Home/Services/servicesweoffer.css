@@ -1,0 +1,56 @@
+.subheading_text{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 36px;
+/* identical to box height */
+
+
+/* black */
+
+color: #302A39;
+position: relative;
+left: 10px;
+}
+.description_text{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 150%;
+/* or 27px */
+
+letter-spacing: 0.005em;
+
+/* dark-grey-tone_1 */
+
+color: #787878;
+position: relative;
+left : 10px;
+}
+.hire_us_button{
+    height: 62px;
+
+/* primary gradient */
+
+background: linear-gradient(106.83deg, #9218F2 9.68%, #7C539D 78.18%);
+box-shadow: 0px 10px 30px rgba(151, 71, 255, 0.3);
+border-radius: 12px;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 27px;
+/* identical to box height */
+
+
+/* white */
+
+color: #FFFFFF;
+
+border: none;
+width: 100%;
+position: relative;
+left: 10px;
+}

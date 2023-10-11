@@ -1,0 +1,6 @@
+@media (max-width : 768px) {
+    .tax_container{
+        position: relative !important;
+        top: 150px !important;
+      }
+}
