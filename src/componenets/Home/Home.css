@@ -194,13 +194,15 @@
 
 .gif-container {
     position: relative;
+    width: 100%;
+
 }
 
 .gifs {
-    height: 100vh;
     /* height: 60rem; */
     position: absolute;
-    top: -5rem;
+    top: -10rem;
+    height: 1000px;
     width: 100%;
     z-index: -1;
 }
@@ -235,3 +237,4 @@
     }
 
 }
+
