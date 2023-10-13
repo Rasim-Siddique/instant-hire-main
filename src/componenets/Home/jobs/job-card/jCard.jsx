@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import "./jCard.css";
 
 
-function JCard({tagged}) {
+function JCard({tagged,jobTitle,jobOpportunity,jobDate,jobDes}) {
   const navigate = useNavigate();
 
   const navigateToPage = (path) => {
@@ -22,15 +22,15 @@ function JCard({tagged}) {
                 <Row>
                   <Col lg={1} xs={1}></Col>
                   <Col lg={13} xs={18}>
-                    <span className="job_title">Senior UI/UX Designer</span>
+                    <span className="job_title">{jobTitle}</span>
                   </Col>
                   <Col lg={9} xs={1}></Col>
 
                   <Col lg={1} xs={9}>
                     
-                   {tagged ? <div className="hybrid-tag_1"><span className="hybrid-text_1">Hybrid</span></div> : null
+                   {tagged ? <div className="hybrid-tag_1"><span className="hybrid-text_1">{jobOpportunity}</span></div> : null
 }                    
-                    <span className="date_span">22/Jan/2022</span>
+                    <span className="date_span">{jobDate}</span>
                   </Col>
                 </Row>
                 <br />
@@ -39,7 +39,7 @@ function JCard({tagged}) {
                   <Col lg={1} xs={1}></Col>
                   <Col lg={21} xs={22}>
                     <span className="description_span_2">
-                      Remote UTCo to UTC8 | Competitive Package
+                      {jobDes}
                     </span>
                   </Col>
                 </Row>

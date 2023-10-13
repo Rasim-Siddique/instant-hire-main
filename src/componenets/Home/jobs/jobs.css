@@ -125,6 +125,10 @@ color: #302A39;
 
   color: #302a39;
 }
+.active-link{
+    text-decoration:5px underline #9d5bff;
+    text-underline-offset: 14px; /* Adjust this value to increase the space between text and underline */
+}
 @media (max-width: 768px) {
   .vaccancy_heading {
     font-size: 20px;
