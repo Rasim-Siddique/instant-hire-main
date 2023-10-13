@@ -276,6 +276,7 @@ function AllJobs() {
                         jobOpportunity={jobOpportunity}
                         jobDate={jobDate}
                         jobDes={jobDes}
+                        paramValue={paramValue}
                       /></Col>
 
                     </>

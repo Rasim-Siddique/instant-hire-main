@@ -1,7 +1,6 @@
-import { width } from "@mui/system";
 import { Row, Col } from "antd";
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./jCard.css";
 
 
@@ -47,17 +46,32 @@ function JCard({tagged,jobTitle,jobOpportunity,jobDate,jobDes}) {
                 <Row>
                   <Col lg={1} xs={1}></Col>
                   <Col lg={10} xs={11}>
-                    <button className="button_apply">
-                      <span className="apply_text" onClick={() => {navigateToPage('/apply-to-job')}}>Apply</span>
-                    </button>
+                  <Link
+  to={{
+    pathname: "/apply-to-job",
+    search: `?jobs=${jobTitle.replace(/ /g, '-')}` // Replace spaces with hyphens
+  }}
+>
+  <button className="button_apply">
+    <span className="apply_text">Apply</span>
+  </button>
+</Link>
                   </Col>
                   <Col lg={1} xs={1}></Col>
                   <Col lg={10} xs={10}>
+                  <Link
+                    to={{
+                      pathname: "/apply-to-job",
+                      search: `?jobs=${jobTitle}`,
+                    }}
+
+                  >
                     <button className="button_refer"
-                    onClick={() => {navigateToPage('/apply-to-job')}}
+                
                     >
                       <span className="refer_text" >Refer</span>
                     </button>
+                    </Link>
                   </Col>
                   <Col lg={2} xs={1}></Col>
                 </Row>
