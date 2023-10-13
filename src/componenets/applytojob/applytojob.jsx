@@ -9,6 +9,9 @@ import search from "../.././assets/document-upload.svg"
 import Footer from "../../componenets/Home/Footer/footer"
 
 function ApplyToJob() {
+  const descriptionOfAllJobs=[
+    {jobTitle:"React js", jobOpportunity:"Full Time",jobType:"Hybrid", jobLocation:"United States", jobPostedDate:"22/Jan/2023", jobIntro:"The company was founded by compliance", jobRequirements:"Looking for a creative, skilled UI/UX Designer", jobResponsibilties:["Work with other developers", "Translate concepts into user flows", "Make strategic design "], canditatesRequirement:["Work with other developers", "Translate concepts into user flows", "Make strategic design "], details:["Work with other developers", "Translate concepts into user flows", "Make strategic design "]}
+  ]
   return (
     <>
       <NavbarDekstop />
