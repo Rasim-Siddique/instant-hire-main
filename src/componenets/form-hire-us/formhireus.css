@@ -75,6 +75,7 @@ font-style: normal;
 font-weight: 600;
 font-size: 18px;
 line-height: 27px;
+cursor: pointer;
 /* identical to box height */
 
 
@@ -82,4 +83,8 @@ line-height: 27px;
 
 color: #FFFFFF;
 
+}
+
+.error-text{
+    color: red;
 }

@@ -1,40 +1,57 @@
-import { Col, Row } from "antd";
-import React from "react";
+import { Col, Row, message } from "antd";
+import React, { useState } from "react";
 import "./formhireus.css";
 import 'react-phone-input-2/lib/style.css'
 import PhoneInput from "react-phone-input-2";
-import Footer from "../Home/Footer/footer";
-
-const items = [
-  {
-    key: '1',
-    label: (
-      <a target="_blank" rel="noopener noreferrer" href="https://www.antgroup.com">
-        1st menu item
-      </a>
-    ),
-  },
-  {
-    key: '2',
-    label: (
-      <a target="_blank" rel="noopener noreferrer" href="https://www.aliyun.com">
-        2nd menu item
-      </a>
-    ),
-  },
-  {
-    key: '3',
-    label: (
-      <a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
-        3rd menu item
-      </a>
-    ),
-  },
-];
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 
 
 function FormHireUs() {
+  const navigate=useNavigate()
+  const [formFields, setFormFields] = useState({
+    fullName: "",
+    workEmail: "",
+    phoneNumber: "",
+    companyName: "",
+    companyLocation: "",
+    companySize: "",
+  });
+
+
+  const handleFieldChange = (e) => {
+    const { name, value } = e.target;
+    setFormFields({ ...formFields, [name]: value });
+  };
+
+
+  const handleSubmit = async (e) => {
+
+        e.preventDefault();
+
+        const {fullName,workEmail,phoneNumber,companyName, companyLocation, companySize}=formFields
+        if(fullName && workEmail &&phoneNumber &&companyName && companyLocation && companySize){
+          const response = await axios.post("/client-info-register", formFields);
+          if(response.status===422 || !response){
+            message.error('Something Went Wrong');
+    
+          }else{
+            message.success('Client Info Created Successfully');
+            setFormFields("")
+            // navigate('/')
+          }
+          console.log("API Response:", response.data);
+        }
+     
+        else{
+          message.error('Please First Fill All the Fields');
+
+        }
+
+    // Clear form fields after submission
+  
+  };
   return (
     <>
     <Row>
@@ -59,7 +76,16 @@ function FormHireUs() {
         <Row>
           <Col lg={1} xs={1}></Col>
           <Col lg={22} xs={22}>
-            <input placeholder="Enter your full name" className="input-form" />
+            <div>
+        <input
+          type="text"
+          name="fullName"
+          placeholder="Full Name *"
+          value={formFields.fullName}
+          onChange={handleFieldChange}
+          className="input-form"
+        />
+      </div>
           </Col>
           <Col lg={1} xs={1}></Col>
         </Row>
@@ -75,7 +101,16 @@ function FormHireUs() {
         <Row>
           <Col lg={1} xs={1}></Col>
           <Col lg={22} xs={22}>
-            <input placeholder="name@company.com" className="input-form" />
+            <div>
+        <input
+          type="text"
+          name="workEmail"
+          placeholder="Work Email *"
+          value={formFields.workEmail}
+          onChange={handleFieldChange}
+        className="input-form"
+        />
+      </div>
           </Col>
           <Col lg={1} xs={1}></Col>
         </Row>
@@ -91,21 +126,29 @@ function FormHireUs() {
         <Row>
           <Col lg={1} xs={1}></Col>
           <Col lg={22} xs={22}>
-          <PhoneInput
-                            containerClass="input-form"
-                            country={'us'}
-            inputStyle={{
-                                height: "100%",
-                                width : "100%",
-                                background: "#FFFFFF",
-                                border : "none",
-                                outline : "none "
-            }}
-            buttonStyle={{
-                left : "-1px",
-                background : "white"
-            }}
-                            />
+      
+
+
+<PhoneInput
+        containerClass="input-form"
+        country={"us"}
+        inputStyle={{
+          height: "100%",
+          width: "100%",
+          background: "#FFFFFF",
+          border: "none",
+          outline: "none",
+        }}
+        buttonStyle={{
+          left: "-1px",
+          background: "white",
+        }}
+        value={formFields.phoneNumber}
+        onChange={(value) =>
+          setFormFields({ ...formFields, phoneNumber: value })
+        }
+      />
+
 
           </Col>
           <Col lg={1} xs={1}></Col>
@@ -122,7 +165,17 @@ function FormHireUs() {
         <Row>
           <Col lg={1} xs={1}></Col>
           <Col lg={22} xs={22}>
-            <input placeholder="xyz company" className="input-form" />
+
+            <div>
+        <input
+          type="text"
+          name="companyName"
+          placeholder="company Name *"
+          value={formFields.companyName}
+          onChange={handleFieldChange}
+        className="input-form"
+        />
+      </div>
           </Col>
           <Col lg={1} xs={1}></Col>
         </Row>
@@ -139,7 +192,17 @@ function FormHireUs() {
         <Row>
           <Col lg={1} xs={1}></Col>
           <Col lg={22} xs={22}>
-            <input placeholder="address" className="input-form" />
+            {/* <input placeholder="address" className="input-form" /> */}
+            <div>
+        <input
+          type="text"
+          name="companyLocation"
+          placeholder="company Location *"
+          value={formFields.companyLocation}
+          onChange={handleFieldChange}
+        className="input-form"
+        />
+      </div>
           </Col>
           <Col lg={1} xs={1}></Col>
         </Row>
@@ -155,7 +218,18 @@ function FormHireUs() {
         <Row>
           <Col lg={1} xs={1}></Col>
           <Col lg={22} xs={22}>
-            <input placeholder="100-200" className="input-form" />
+            {/* <input placeholder="100-200" className="input-form" /> */}
+         
+            <div>
+        <input
+          type="text"
+          name="companySize"
+          placeholder="company Size *"
+          value={formFields.companySize}
+          onChange={handleFieldChange}
+        className="input-form"
+        />
+      </div>
           </Col>
           <Col lg={1} xs={1}></Col>
         </Row>
@@ -164,7 +238,9 @@ function FormHireUs() {
         <Row>
           <Col lg={1} xs={1}></Col>
           <Col lg={22} xs={22}>
-            <button className="submit_button">Submit</button>
+          <button className="submit_button" onClick={handleSubmit}>
+        Submit
+      </button>
           </Col>
           <Col lg={1} xs={1}></Col>
         </Row>
