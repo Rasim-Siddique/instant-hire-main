@@ -1,4 +1,5 @@
-import { Col, Input, Row } from "antd";
+import { Col, Input, Row, message, Upload, Button } from "antd";
+import { UploadOutlined } from "@ant-design/icons";
 import React, { useEffect, useState } from "react";
 import NavbarDekstop from "../navbars/navbar";
 import "./applytojob.css";
@@ -6,6 +7,7 @@ import image1 from "../../assets/applytojob/image2.svg";
 import PhoneInput from "react-phone-input-2";
 import search from "../.././assets/document-upload.svg"
 import { useLocation } from "react-router-dom";
+import axios from "axios";
 
 
 const allJobsArr = [
@@ -24,14 +26,19 @@ const allJobsArr = [
 
 function ApplyToJob() {
   const [data, setData]=useState(allJobsArr);
+  const [cvFile, setCvFile] = useState(null);
   const [details, setDetails]=useState(null);
 
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
   const paramValue = searchParams.get('jobs');
+  const [formFields, setFormFields] = useState({
+    fullName: "",
+    workEmail: "",
+    phoneNumber: "",
+  });
 
 
-  console.log("paramValue:::", paramValue)
 
   useEffect(()=>{
       if(paramValue){
@@ -43,6 +50,55 @@ function ApplyToJob() {
           }
   },[paramValue, data])
  
+  const handleFieldChange = (e) => {
+    const { name, value } = e.target;
+    setFormFields({ ...formFields, [name]: value });
+  };
+
+
+  const handleFileChange = (e) => {
+    const { name, value, files } = e.target;
+  
+    if (name === "cvFile") {
+      setCvFile(files[0]); // Store the selected CV file
+    } else {
+      setFormFields({ ...formFields, [name]: value });
+    }
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const { fullName, workEmail, phoneNumber } = formFields;
+
+    if (fullName && workEmail && phoneNumber && cvFile) {
+        const formData = new FormData();
+        formData.append('fullName', fullName);
+        formData.append('workEmail', workEmail);
+        formData.append('phoneNumber', phoneNumber);
+        formData.append('cvFile', cvFile);
+
+        try {
+            const response = await axios.post("/job-application-register", formData, {
+                headers: {
+                    'Content-Type': 'multipart/form-data',
+                },
+            });
+
+            if (response.status === 201) {
+                message.success('Client Info Created Successfully');
+                setFormFields("");
+                // navigate('/')
+            } else {
+                message.error('Something Went Wrong');
+            }
+        } catch (error) {
+            message.error('Something Went Wrong');
+        }
+    } else {
+        message.error('Please First Fill All the Fields');
+    }
+};
 
 
 
@@ -222,7 +278,12 @@ function ApplyToJob() {
           <Row style={{width : "100%",marginTop : "2vh"}}>
           <Col lg={1} xs={1}></Col>
           <Col lg={22} xs={22}>
-            <input placeholder="Enter your full name" className="input-form" />
+            <input
+             name="fullName"
+             placeholder="Full Name *"
+             value={formFields.fullName}
+             onChange={handleFieldChange}
+            className="input-form" />
           </Col>
           <Col lg={1} xs={1}></Col>
         </Row>
@@ -236,7 +297,14 @@ function ApplyToJob() {
             <Row style={{width : "100%",marginTop : "2vh"}}>
           <Col lg={1} xs={1}></Col>
           <Col lg={22} xs={22}>
-            <input placeholder="Enter your email" className="input-form" />
+          <input
+          type="text"
+          name="workEmail"
+          placeholder="Work Email *"
+          value={formFields.workEmail}
+          onChange={handleFieldChange}
+        className="input-form"
+        />
           </Col>
           <Col lg={1} xs={1}></Col>
         </Row>
@@ -251,19 +319,25 @@ function ApplyToJob() {
           <Col lg={1} xs={1}></Col>
           <Col lg={22} xs={22}>
           <PhoneInput
-                            containerClass="input-form"
-                            country={'us'}
-            inputStyle={{
-                                height: "100%",
-                                width : "100%",
-                                background: "#FFFFFF",
-                                outline : "none "
-            }}
-            buttonStyle={{
-                left : "-1px",
-                background : "white"
-            }}
-                            />
+        containerClass="input-form"
+        country={"us"}
+        inputStyle={{
+          height: "100%",
+          width: "100%",
+          background: "#FFFFFF",
+          border: "none",
+          outline: "none",
+        }}
+        buttonStyle={{
+          left: "-1px",
+          background: "white",
+        }}
+        value={formFields.phoneNumber}
+        onChange={(value) =>
+          setFormFields({ ...formFields, phoneNumber: value })
+        }
+      />
+
 
           </Col>
           <Col lg={1} xs={1}></Col>
@@ -284,26 +358,25 @@ function ApplyToJob() {
               <Col lg={1}></Col>
               <Col lg={22}>
               <Input
-            placeholder="Search Your Jobs"
-            suffix={<img src={search} alt="img-ui" />}
-            height={"62px"}
-         className="input-form"
-          />
+      type="file"
+      name="cvFile"
+      onChange={handleFileChange}
+    />
               </Col>  
               <Col lg={1}></Col>
           </Row>
           <Row style={{width : "100%", marginTop: "4.5vh"}}>
           <Col lg={1} xs={1}></Col>
           <Col lg={22} xs={22}>
-            <button className="submit_button">Submit</button>
+          <button className="submit_button" onClick={handleSubmit}>
+        Submit
+      </button>
           </Col>
           <Col lg={1} xs={1}></Col>
           </Row>
         </Col>
       </Row>
-      {/* <br />
-      <br /> */}
-     {/* <Footer /> */}
+     
     </>
   );
 }
